@@ -1,0 +1,89 @@
+html {
+background: #100a1c;
+background-image:
+radial-gradient(50% 30% ellipse at center top, #201e40 0%, rgba(0,0,0,0) 100%),
+radial-gradient(60% 50% ellipse at center bottom, #261226 0%, #100a1c 100%);
+background-attachment: fixed;
+color: #6cacc5;
+}
+
+.header{
+	display:flex;
+	justify-content: space-around;
+	
+}
+
+.shap{
+	widht: 1920px;
+	height: 51px;
+	background-color: #6F6F6F;
+
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+	background-color: #C4C4C4;
+	border-radius: 25px; 
+	justify-content: center;
+}
+
+.logo p{
+	text-align: center;
+	margin: 0px;	
+}
+
+.menu{
+	display: flex;
+	justify-content: space-around;
+	color: white;
+}
+
+.reg{
+	display: flex; 
+	justify-content: flex-end;
+}
+
+.cont {
+	display: flex; 
+	justify-content: space-between;
+}
+
+.cont img{
+	width: 350px;
+	height: 249px;
+}
+
+.btn {
+        width: 60px;
+        height: 60px;
+        background: #6f6f6f;
+        display: inline-block;
+        text-align: center;
+        line-height: 60px;
+        user-select: none;
+    }
+ 
+    .btn:hover {
+        background: #cb5d5d;
+        color: #fff;
+    }
+ 
+    #calc-wrap {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        
+    }
+ 
+    #calc {
+        width: 240px;
+        display: inline-block;
+    }
+ 
+    #inputVal {
+        width: 100%;
+        border: 0;
+        font-size: 16px;
+        resize: vertical;
+    }

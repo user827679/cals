@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Начало</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+	 
+	<header>
+	
+	<div class="shap">
+	
+	   <div class="menu">
+	   <div class="logo"><p>logo</p></div>
+	     <div class="stk">Home</div>
+		 <div class="stk">Home</div>
+		 <div class="stk">Home</div>
+		 <div class="stk">Home</div>
+		 <div class="reg"><img src="img/Rectangle2.png"></div>
+	   </div>
+	</div>
+	
+
+	
+	</header>
+   </div>
+   
+    <div id="calc-wrap">
+    <div id="calc">
+        <textarea id=inputVal>0</textarea>
+    </div>
+</div>
+
+    </body>
+	<script>
+window.addEventListener('load', function OnWindowLoaded() {
+    var signs = [
+        '1', '2', '3', '+',
+        '4', '5', '6', '-',
+        '7', '8', '9', '/',
+        '0', '=', '.', 'c'
+    ];
+    var calc = document.getElementById('calc');
+    var textArea = document.getElementById('inputVal');
+	
+    signs.forEach(function (sign) {
+        var signElement = document.createElement('div');
+        signElement.className = 'btn';
+        signElement.innerHTML = sign;
+        calc.appendChild(signElement);
+    });
+ 
+    
+    document.querySelectorAll('#calc-wrap .btn').forEach(function (button) {
+
+        button.addEventListener('click', onButtonClick);
+    });
+ 
+
+    function onButtonClick(e) {
+   
+        if (e.target.innerHTML === 'c') {
+      
+            textArea.innerHTML = '0';
+        } else if (e.target.innerHTML === '=') {
+      
+            textArea.innerHTML = eval(textArea.innerHTML);
+        } else if (textArea.innerHTML === '0') {
+
+            textArea.innerHTML = e.target.innerHTML;
+        } else {
+            textArea.innerHTML += e.target.innerHTML;
+        }
+		
+		
+    }
+	
+});
+</script>
+</html>
+
+
+
+
+
